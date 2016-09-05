@@ -1,0 +1,76 @@
+<head>
+  <title>Getaways</title>
+</head>
+
+<body>
+  <!---- BOX AT THE TOP ---->
+  <section id="top-content" style="margin: 30px;">
+
+<!-- *********** WELCOME BACK MESSAGE ****************** -->
+
+    <h1><u>Search By</u></h1>
+
+    <div id="tag_cloud" style="width: 100%;">
+      <% tag_cloud Listing.tag_counts, %w[s m l] do |tag, css_class| %>#<%= link_to tag.name, tag_path(tag.name), class: css_class %><%= " | " %>
+      <% end %>
+    </div>
+  </section>
+
+  <div class="container">
+    <br>
+    <!-- Begin of rows -->
+    <% @listings.each do |l| %>
+    <div class="row carousel-row">
+      <!-- Original --> <!-- <div class="col-xs-8 col-xs-offset-2 slide-row"> -->
+      <div class="col-lg-12 col-med-offset-8 slide-row">
+        <div id="carousel-1" class="carousel slide slide-carousel" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-1" data-slide-to="1"></li>
+            <li data-target="#carousel-1" data-slide-to="2"></li>
+          </ol>
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="item active" style="width: 300px">
+              <% l.image.each do |image|%>
+              <%= image_tag image.unicorn%>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        <!-- INSERT SLIDE CONTENT HERE (ZWH) -->
+        <div class="slide-content">
+          <h1 class="page-title"><%= link_to l.name, l %></h1>
+          <p><%= l.description %></p>
+<!--           <p><b>Hosted By: </b><%= l.user.first_name %> <%= l.user.last_name %></p> -->
+
+
+   <p><b>Hosted By: </b><% fullname = l.user.first_name + ' ' + l.user.last_name%> <%= fullname %></p>
+
+
+          
+          <p><b>Country: </b><%= l.country %></p>
+          <p><b>City: </b><%= l.city %></p>
+          <p><b>Address: </b><%= l.address %></p>
+          <p><b>Room Type: </b><%= l.room_type %></p>
+          <p><b>Property Type: </b><%= l.property_type %></p>
+          <p><b>Accomodates: </b><%= l.accomodates %></p>
+          <p><b>Number of Bedrooms: </b><%= l.num_of_beds %></p>
+          <p><b>Number of Bathrooms: </b><%= l.num_of_bathrooms %></p>
+          <p><b>Categories: </b>
+            <%= raw l.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
+            <p><b>Price Per Stay: </b><%= l.price %></p>
+            <% @full_name = l.user.first_name + " " + l.user.last_name %> 
+          </div>
+          <div class="slide-footer">
+            <span class="pull-right buttons">
+              <button class="btn btn-sm btn-primary"><i class="fa fa-fw fa-shopping-cart"></i> More Info </button>
+            </span>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </body>
