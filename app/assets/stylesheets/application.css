@@ -13,3 +13,225 @@
  *= require_tree .
  *= require_self
  */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+
+html {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  color: #333333;
+  background-color: #f5f5f5;
+}
+
+/* ----- Nav Bar -----*/
+nav.navbar-findcond { background: #fff; border-color: #ccc; box-shadow: 0 0 2px 0 #ccc; }
+nav.navbar-findcond a { color: #f14444; }
+nav.navbar-findcond ul.navbar-nav a { color: #f14444; border-style: solid; border-width: 0 0 2px 0; border-color: #fff; }
+nav.navbar-findcond ul.navbar-nav a:hover,
+nav.navbar-findcond ul.navbar-nav a:visited,
+nav.navbar-findcond ul.navbar-nav a:focus,
+nav.navbar-findcond ul.navbar-nav a:active { background: #fff; }
+nav.navbar-findcond ul.navbar-nav a:hover { border-color: #f14444; }
+nav.navbar-findcond li.divider { background: #ccc; }
+nav.navbar-findcond button.navbar-toggle { background: #f14444; border-radius: 2px; }
+nav.navbar-findcond button.navbar-toggle:hover { background: #999; }
+nav.navbar-findcond button.navbar-toggle > span.icon-bar { background: #fff; }
+nav.navbar-findcond ul.dropdown-menu { border: 0; background: #fff; border-radius: 4px; margin: 4px 0; box-shadow: 0 0 4px 0 #ccc; }
+nav.navbar-findcond ul.dropdown-menu > li > a { color: #444; }
+nav.navbar-findcond ul.dropdown-menu > li > a:hover { background: #f14444; color: #fff; }
+nav.navbar-findcond span.badge { background: #f14444; font-weight: normal; font-size: 11px; margin: 0 4px; }
+nav.navbar-findcond span.badge.new { background: rgba(255, 0, 0, 0.8); color: #fff; }
+
+/* ----- Carousel -----*/
+
+div.col-xs-12 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.carousel-caption {
+	margin-bottom: 70px;
+}
+
+.carousel {
+  height: 500px;
+  margin-bottom: 60px;
+}
+.carousel .item {
+  height: 700px;
+  background-color: #777;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 250px;
+}
+.search {
+	margin-top: 6%;
+}
+.search .form-section{
+	background:rgba(0,0,0,0.6);
+	border: 2px solid #414141;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+span.glyphicon.glyphicon-chevron-left::before{
+  font-size: 60px;
+  padding-top: 100px;
+}
+
+span.glyphicon.glyphicon-chevron-right::before{
+  font-size: 60px;
+  padding-top: 100px;
+}
+
+a.left.carousel-control {
+  height: 700px;
+}
+
+a.right.carousel-control {
+  height: 700px;
+}
+
+/* ----- Sign-In -----*/
+
+div#clearance.sign-in {
+  padding-bottom: 100px;
+}
+
+/* ----- Footer -----*/
+
+div.footer {
+  background-color: #333;
+  padding: 20px;
+  bottom: 0;
+/*  margin-top: 50px;*/
+  position: relative;
+  width: 100%;
+/*  border-top: solid;*/
+/*  border-color: #fff;*/
+}
+
+a.footer-btn {
+  text-decoration: none;
+  padding: 20px 80px;
+  color: #fff;
+  font-size: 15px;
+}
+
+a.footer-btn:hover {
+  color: #f14444;
+  text-decoration: none;
+}
+
+/* ----- Avatar -----*/
+.avatar {
+	position: relative;
+	margin-top: 15px;
+	z-index: 100;
+}
+
+.avatar img {
+ 	width: 100px;
+ 	height: 100px;
+ 	-webkit-border-radius: 50%;
+ 	-moz-border-radius: 50%;
+ 	border-radius: 50%;
+ 	border-style: solid;
+ 	border-color: white;
+ 	border-width: 3px;
+}
+
+.avatar-xs {
+	margin-left: 7px;
+	width: 30%;
+	height: 30%;
+	-webkit-border-radius: 50%;
+ 	-moz-border-radius: 50%;
+ 	border-radius: 50%;
+}
+
+/* ----- Images -----*/
+.image {
+  position: relative;
+  margin-top: 15px;
+  z-index: 100;
+}
+
+.dropdown-toggle-profile {
+	width: 200px;
+  padding-top: 15px; margin-top: -13px;
+}
+
+/* Homepage */
+img {
+  width: 335px;
+  height: 344px;
+}
+
+h4.image-text {
+
+  font-size: 30px;
+  color: black;
+  position: absolute;
+  top: 300px;
+  left: 50px;
+}
+
+/*Aligns the pictures to the center*/
+section.recent-listings {
+  text-align: center;
+  padding-bottom: 200px;
+}
+
+div.homepic {
+  display: inline-block;
+  width: 335px;
+  height: 344px;
+}
+
+img.img-circle:hover{
+/*  opacity: 0.7;*/
+  background-color: #222;
+}
+
+
+/* ----- Listing Index / Getaways -----*/
+div.getaways {
+  padding-bottom: 100px;
+}
+
+div.search {
+  padding-bottom: 100px
+}
+
+/* ----- Payments -----*/
+div.payment {
+  padding-bottom: 150px;
+}
+
+div.homepage_images-b {
+  width: 100;
+  height: 100;
+}
+
+/* Image Center */
+
+.col-md-4 {
+  float:  left;
+}
+
+h4.location-tag {
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 140px;
+    width: 100%;
+    color: #fff;
+    font-size: 40px;
+}
