@@ -1,15 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Welcome to ZBNB</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+  <%= javascript_include_tag 'application' %>
+  <%= stylesheet_link_tag    'application' %>
+  <%= csrf_meta_tag %>
+  <!-- Viewport i.e. user's terminal/device. Initial scale means DO NOT ZOOM  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
+  integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" 
+  integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous"> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <!-- Include Required Prerequisites -->
+  <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <!-- Include Date Range Picker -->
+  <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+   <!-- Braintree --> 
+  <script src="https://js.braintreegateway.com/v2/braintree.js"></script>
+
 </head>
 <body>
-	<h1>Welcome to ZBNB</h1>
 
-<%= yield %>
+  <div class="col-xs-12">
 
+    <%= render partial: "layouts/navbar" %>
+
+
+    <!-- Bar, top right -->
+
+      <div id="flash">
+        <% flash.each do |key, value| -%>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+        <% end %>
+      </div>
+
+    <br><br><br>
+
+    <%= yield %>
+
+    <!-- Footer -->
+
+  </div>
 </body>
+<footer>
+</footer>
 </html>
+
+
+
+
+
+
+
