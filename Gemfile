@@ -1,10 +1,33 @@
 source 'https://rubygems.org'
 
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+# Elastic Search Gems
+gem 'elasticsearch-model'
+gem 'elasticsearch-rails'
+gem 'searchkick'
+# Sidekiq Gem
+gem 'sidekiq'
+# Braintree Gem for Payments 
+gem 'braintree'
+# Carrierwave Gem for Image Upload
+gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
+# Mini Magick
+gem 'mini_magick'
+# Tag Gem
+gem 'acts-as-taggable-on'
+# Omniauth Gem
+gem 'omniauth'
+# Facebook Log-in
+gem 'omniauth-facebook'
+# Figaro Gem
+gem 'figaro'
+# Clearance Gem
+gem 'clearance'
+
+# Bundle edge Rails instead: Gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# Use postgresql as the database for Active Record
+gem 'pg', '~> 0.15'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -23,6 +46,11 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+
+######### ADDED BY ZWH 4TH SEPT '16 - NOKOGIRI 
+gem 'nokogiri', '~> 1.6.8'
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -38,6 +66,8 @@ group :development, :test do
 end
 
 group :development do
+######### ADDED BY ZWH 4TH SEPT '16 - SQLITE3
+  gem 'sqlite3', '1.3.11'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
@@ -45,3 +75,6 @@ group :development do
   gem 'spring'
 end
 
+group :production do
+  gem 'rails_12factor', '0.0.2'
+end
