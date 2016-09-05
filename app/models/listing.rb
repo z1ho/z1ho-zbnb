@@ -1,6 +1,6 @@
 # require 'elasticsearch/model'
 
-# class Listing < ActiveRecord::Base
+class Listing < ActiveRecord::Base
 
 #   belongs_to :user
 #   has_many :tags, :dependent => :destroy
@@ -26,7 +26,7 @@
 #   include Elasticsearch::Model
 #   include Elasticsearch::Model::Callbacks
 
-# end
+end
 
 # #to autosync model with elasticsearch
 # Listing.import force: true
