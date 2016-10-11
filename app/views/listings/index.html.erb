@@ -3,7 +3,7 @@
 </head>
 
 <body>
-  <!---- BOX AT THE TOP ---->
+  <!-- BOX AT THE TOP -->
   <section id="top-content" style="margin: 30px;">
 
 <!-- *********** WELCOME BACK MESSAGE ****************** -->
@@ -44,12 +44,9 @@
         <div class="slide-content">
           <h1 class="page-title"><%= link_to l.name, l %></h1>
           <p><%= l.description %></p>
-<!--           <p><b>Hosted By: </b><%= l.user.first_name %> <%= l.user.last_name %></p> -->
-
+<!--      <p><b>Hosted By: </b><%= l.user.first_name %> <%= l.user.last_name %></p> -->
 
    <p><b>Hosted By: </b><% fullname = l.user.first_name + ' ' + l.user.last_name%> <%= fullname %></p>
-
-
           
           <p><b>Country: </b><%= l.country %></p>
           <p><b>City: </b><%= l.city %></p>

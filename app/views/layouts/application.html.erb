@@ -28,23 +28,23 @@
 
     <%= render partial: "layouts/navbar" %>
 
-
-    <!-- Bar, top right -->
+    <!-- Error Messages and Alerts -->
 
       <div id="flash">
         <% flash.each do |key, value| -%>
         <div class="alert alert-<%= key %>"><%= value %></div>
         <% end %>
       </div>
-
+      
+    <!-- ADJUST SPACING -->
     <br><br><br>
 
     <%= yield %>
 
-    <!-- Footer -->
+    <!-- Custom Self-Made Footer -->
      <center>
       <div class="footer">
-        <%= link_to "About Us", "#", class: "footer-btn" %>
+        <%= link_to "About Us", "sessions_about_path", class: "footer-btn" %>
         <%= link_to "Careers", "#", class: "footer-btn" %>
         <%= link_to "Press", "#", class: "footer-btn" %>
         <%= link_to "Blog", "#", class: "footer-btn" %>
