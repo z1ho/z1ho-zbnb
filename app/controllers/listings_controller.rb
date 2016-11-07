@@ -9,10 +9,11 @@ class ListingsController < ApplicationController
     end
   end
 
+##### Commented out by ZWH 6th NOV 2016
   def show
-    @listing = Listing.find(params[:id])
-    @user == current_user
-    @reserve = @listing.reservations.new
+    # @listing = Listing.find(params[:id])
+    # @user == current_user
+    # @reserve = @listing.reservations.new
   end
 
   def new

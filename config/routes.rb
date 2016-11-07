@@ -60,7 +60,13 @@ Rails.application.routes.draw do
  get 'listings/template'
 
 ###### ZWH added 5th SEPT 2016
- get 'sessions/about'
+get 'sessions/about'
+###### ZWH added 4th NOV 2016
+get 'sessions/career'
+get 'sessions/terms'
+get 'sessions/blog'
+get 'sessions/press'
+get 'listings/index'
 
   # PAYMENTS
   # get 'payments/new/:id', to: "payments#new"
